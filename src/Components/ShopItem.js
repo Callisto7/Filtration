@@ -1,26 +1,28 @@
 import React from "react";
 
-function ShopItem(props){
-    let {title, caption, img, price} = props;
+function ShopItem({ name, price, color, img }){
 
     return (
-        <div className="shop-item">
+       <div className="shop-item">
             <div className="thumb">
                 <figure>
-                    <img src={img} alt={title} />
+                    <img 
+                        src={img} 
+                        alt={name} 
+                    />
                 </figure>
             </div>
             <div className="title">
-                {title}
+                {name}
             </div>
             <div className="description">
-                {caption}
+                {color}
             </div>
             <div className="price">
-                {price}
+                &#36;{price}
             </div>
-            <button className="btn" ><span className="button-card"/>Add to cart</button>
-        </div>
+            <button className="btn"><span className="button-card"/>Add to cart</button>
+       </div>
     );
 };
 

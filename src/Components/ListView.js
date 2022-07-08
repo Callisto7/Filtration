@@ -1,23 +1,14 @@
 import React from "react";
+import ShopItem from "./ShopItem";
 
-function ListView (props)  {
-    let {items} = props;
-
-    const _renderItems = (items) => {
-        return items.map((item, i) => {
-            return (
-                <li className="list-item" key={`li-${i}`}>
-                    {item}
-                </li>
-            );
-        });
-    };
-
+function ListView ({ items })  {
     return (
-        <ul className="list">
-            {_renderItems(items)}
-        </ul>
-    );
+        <div className="list-item">
+            {items.map((item, index) => {
+                return <ShopItem className="list" key={`${index}${item.name}`} {...item}/>
+            })}
+        </div>
+    )
 };
 
 export default ListView;

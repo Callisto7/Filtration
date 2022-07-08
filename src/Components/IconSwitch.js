@@ -1,18 +1,17 @@
 import React from 'react'
 
-function IconSwitch(props) {
-    const Icon = (props) => {
-        let {name, size} = props;
-        return (
-            <i className="material-icons" style={{fontSize: size}}>{name}</i>
-        );
+function IconSwitch({ icon, onSwitch }) {
+
+    const style = {
+        fontSize: '4vh'
     }
 
-    let {icon, onSwitch} = props;
     return (
-        <div className="switch-view" onClick={onSwitch}>
-            <Icon size={42} name={icon}/>
-        </div>
+        <i className="material-icons">
+            <a className='switch-view' href="#" style={style} onClick={() => onSwitch(icon)}>
+                {icon}
+            </a>
+        </i>
     );
 }
 

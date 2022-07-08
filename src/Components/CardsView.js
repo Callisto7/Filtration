@@ -1,28 +1,14 @@
 import React from "react";
+import ShopCard from './ShopCard'
 
-function CardsView(props) {
-    let {layout, cards} = props;
-
-    const _getLayoutClasses = (layout) => {
-        return Object.keys(layout).map(key => `col-${key}-${layout[key]}`).join(" ");
-    };
-
-    let layoutClasses = _getLayoutClasses(layout);
-    const _renderCards = (cards) => {
-        return cards.map((card, i) => {
-            return (
-                <div className={layoutClasses} key={`card-${i}`}>
-                    {card}
-                </div>
-            );
-        });
-    };
-
+function CardsView({ cards }) {
     return (
         <div className="row">
-            {_renderCards(cards)}
+            {cards.map((card, index) => {
+                return <ShopCard key={`${index} ${card.name}`} {...card}/>
+            })}
         </div>
-    );
+    )
 };
 
 export default CardsView;

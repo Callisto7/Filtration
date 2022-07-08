@@ -1,29 +1,26 @@
 import React from "react";
 
-function ShopCard(props){
-    let {title, caption, img, price} = props;
+function ShopCard({ name, price, color, img}){
     return (
         <div className="shop-card">
-            <div className="title">
-                {title}
-            </div>
-            <div className="description">
-                {caption}
-            </div>
+                <div className="title">{name}</div>
+                <div className="caption">{color}</div>
             <div className="slider">
                 <figure>
-                    <img src={img} alt={title} />
+                    <img 
+                        src={img} 
+                        alt={name}
+                    />
                 </figure>
             </div>
-
-            <div className="info">
-                <div className="price">
-                    {price}
-                </div>
+            <footer className="info">
+                <span className="price">
+                    &#36;{price}
+                </span>
                 <button className="btn"><span className="button-card"/>Add to cart</button>
-            </div>
+            </footer>
         </div>
-    );
+    )
 };
 
 export default ShopCard;
