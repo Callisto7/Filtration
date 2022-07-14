@@ -1,0 +1,94 @@
+.App-container {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Form {
+    display: inline-flex;
+    align-items: flex-end;
+  }
+  
+  .Form-control {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+  
+  .Form-control input {
+    max-width: 145px;
+    margin-top: 10px;
+  }
+  
+  .Form input,
+  .Form button {
+    border: 1px solid #000000;
+    border-radius: 5px;
+  }
+  
+  .Form-control__date {
+    padding: 7px;
+  }
+  
+  .Form-control__distance, .Form-control__button-ok {
+    padding: 10px;
+  }
+  
+  .Form-control__button-ok {
+    background-color: #ffffff;
+  }
+
+  .Table {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .Table th {
+    padding-bottom: 20px;
+  
+    font-weight: 400;
+  }
+  
+  .Table th:first-child {
+    text-align: left;
+  }
+  
+  .Table th:first-child {
+    padding-left: 20px;
+  }
+  
+  .Table th:last-child {
+    padding-right: 20px;
+  }
+  
+  .Table tbody {
+    box-shadow: 0 0 0 1px black;
+    border-radius: 15px;
+  }
+
+  .TableRow a {
+    margin-right: 5px;
+  
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .TableRow td:not(:first-child) {
+    text-align: center;
+  }
+  
+  .TableRow td:first-child {
+    padding-left: 20px;
+  }
+  
+  .TableRow td:last-child {
+    padding-right: 20px;
+  }
+  
+  .TableRow td {
+    padding-top: 20px;
+  }
+  
+  .TableRow:last-child td {
+    padding-bottom: 20px;
+  }
