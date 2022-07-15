@@ -6,7 +6,7 @@ function computeInitialCounter() {
   //Вычислительная функция
 }
 
-function State() {
+function UseState() {
   // const [counter, setCounter]  = useState(0) //Создание состояния
   const [counter, setCounter]  = useState(() => {
     return computeInitialCounter()
@@ -57,4 +57,4 @@ function State() {
   );
 }
 
-export default State;
+export default UseState;

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-function Effect() {
+function UseEffect() {
   const [type, setType] = useState('users')
   const [data, setData] = useState([])
   const [pos, setPos] = useState({
@@ -56,4 +56,4 @@ function Effect() {
   );
 }
 	
-export default Effect
+export default UseEffect

@@ -1,10 +1,10 @@
 import React from 'react';
-import Effect from './Hooks/Effect';
+import UseState from './Hooks/UseState';
 
 function App() {
   return (
     <div >
-      <Effect />      
+      <UseState />      
     </div>
   );
 }
