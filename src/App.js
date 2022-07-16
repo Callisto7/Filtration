@@ -1,9 +1,16 @@
 import React from 'react';
-import UseCallback from './Hooks/UseCallback';
+import Main from './Main';
+import Alert from './Alert/Alert';
+import { AlertProvider } from './Alert/AlertContext';
 
-function App() {
+function App() {  
   return (
-    <UseCallback />
+    <AlertProvider>
+      <div className={'container pt-3'}>
+        <Alert />
+        <Main toggle={() => {}}/>
+      </div>
+    </AlertProvider>
   )
 }
 	
