@@ -1,12 +1,10 @@
 import React from 'react';
-import UseState from './Hooks/UseState';
+import UseCallback from './Hooks/UseCallback';
 
 function App() {
   return (
-    <div >
-      <UseState />      
-    </div>
-  );
+    <UseCallback />
+  )
 }
 	
 export default App
