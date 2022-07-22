@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
-import Videos from './data/Videos';
-import VideoList from './components/VideoList';
+import React, { useState, useEffect } from 'react';
+import contentLinks from './data/contentLinks';
+import List from './List/List';
 
 function App() {
-  const [list] = useState(Videos);
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    setList(contentLinks);
+  }, [])
 
   return (
-      <VideoList list={list} />
+    <List list={list} />
   );
 }
 

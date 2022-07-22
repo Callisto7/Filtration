@@ -1,9 +1,8 @@
-import './Video.css';
-import DateTime from './DateTime/DateTime';
+import './Item.css';
 
 export default function Video(props) {
   return (
-    <div className="Video">
+    <div className="Item">
       <iframe
         src={props.url}
         frameBorder="0"
@@ -11,7 +10,7 @@ export default function Video(props) {
         allowFullScreen
         title={props.title}
       />
-      <DateTime date={props.date} />
+      <p className="Item-views">Просмотров: {props.views}</p>
     </div>
   );
 }
