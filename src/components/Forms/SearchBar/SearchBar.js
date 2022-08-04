@@ -1,16 +1,16 @@
 import '../Form.css';
 import './SearchBar.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { changeSearchField } from '../../../slices/searchSlice';
+import { changeSearchField } from '../../../actions/actionCreators';
 
 export default function SearchBar() {
-  const search = useSelector((state) => state.search);
+  const search = useSelector(state => state.search);
   const dispatch = useDispatch();
 
   function handleSearchChange({ target }) {
     const { name, value } = target;
 
-    dispatch(changeSearchField({ name, value }));
+    dispatch(changeSearchField(name, value));
   }
 
   return (

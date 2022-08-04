@@ -3,18 +3,16 @@ import { useSelector, useDispatch } from 'react-redux';
 import {
   addService,
   addServiceChanges,
-} from '../../../slices/listSlice';
-import {
   endServiceEditing,
-  changeServiceField,
-} from '../../../slices/formSlice';
+  changeServiceField
+} from '../../../actions/actionCreators';
 
 export default function Form() {
-  const form = useSelector((state) => state.form);
+  const form = useSelector(state => state.form);
   const dispatch = useDispatch();
 
   function handleInputChange({ target: { name, value } }) {
-    dispatch(changeServiceField({ name, value }));
+    dispatch(changeServiceField(name, value));
   }
 
   return (
@@ -27,10 +25,10 @@ export default function Form() {
         if (form.editingMode.state) {
           const { index } = form.editingMode;
 
-          dispatch(addServiceChanges({ index, name, price }));
+          dispatch(addServiceChanges(index, name, price));
           dispatch(endServiceEditing());
         } else {
-          dispatch(addService({ name, price }))
+          dispatch(addService(name, price))
         }
       }}
 

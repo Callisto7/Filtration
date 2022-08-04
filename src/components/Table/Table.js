@@ -1,8 +1,7 @@
 import './Table.css';
 import TableRow from './TableRow/TableRow';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeService } from '../../slices/listSlice';
-import { editService } from '../../slices/formSlice';
+import { removeService, editService } from '../../actions/actionCreators';
 
 export default function Table() {
   const services = useSelector((state) => state.list);
@@ -11,14 +10,14 @@ export default function Table() {
   const tableLength = 3;
 
   function handleDeleteClick(id) {
-    return dispatch(removeService({ id }));
+    return dispatch(removeService(id));
   }
 
   function handleEditClick(id) {
     const index = services.findIndex((service) => service.id === id);
     const { name, price } = services[index];
 
-    return dispatch(editService({ name, price, editingMode: { state: true, index } }));
+    return dispatch(editService(name, price, { state: true, index }));
   }
 
   let filteredList = null;
