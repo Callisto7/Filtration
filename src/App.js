@@ -1,16 +1,13 @@
-import React from "react";
-import './index.css'
-
-import First from './components/First';
-import Second from './components/Second';
-import Third from './components/Third';
+import Form from './components/Forms/Form/Form';
+import SearchBar from './components/Forms/SearchBar/SearchBar';
+import Table from './components/Table/Table';
 
 function App() {
   return (
     <>
-      <First />
-      <Second />
-      <Third />
+      <Form />
+      <SearchBar />
+      <Table />
     </>
   );
 }
